@@ -1,5 +1,6 @@
 import adapter from '@sveltejs/adapter-auto';
 import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
+import { sveltekit } from '@sveltejs/kit/vite';
 
 const config = {
   extensions: ['.svelte'],
@@ -7,8 +8,9 @@ const config = {
   kit: {
     adapter: adapter(),
     alias: {
-      $lib: 'src/lib',  // Alias correctly mapped
+      $lib: 'src/lib', // Correct alias for $lib
     },
   },
 };
+
 export default config;

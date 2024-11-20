@@ -1,3 +1,4 @@
+
 <div class="container h-full mx-auto flex flex-col justify-center items-center">
     <div class="space-y-5">
         <h1 class="h1">Sensory Overload</h1>

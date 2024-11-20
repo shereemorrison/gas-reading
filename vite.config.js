@@ -1,4 +1,3 @@
-import { purgeCss } from 'vite-plugin-tailwind-purgecss';
 import { sveltekit } from '@sveltejs/kit/vite';
 import { defineConfig } from 'vite';
 
@@ -9,8 +8,5 @@ export default defineConfig({
     },
     ssr: {
         noExternal: ['@supabase/supabase-js'], // Prevent SSR issues with Supabase
-    },
-        define: {
-            'process.env': process.env,
-        },
-    });
+    }
+});
