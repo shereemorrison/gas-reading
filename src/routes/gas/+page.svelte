@@ -3,7 +3,7 @@
 
     let tableArr: any[] = [];
     let currentPage: number = 1;
-    const resultsPerPage: number = 10;
+    const resultsPerPage: number = 8
 
     async function loadReadings(page: number) {
         const offset = (page - 1) * resultsPerPage;
@@ -23,7 +23,7 @@
 
 <div class="container h-full mx-auto flex justify-center items-center">
     <div class="space-y-5">
-        <h1 class="h1">Gas Readings</h1>
+        <h3 class="h3">Gas Readings</h3>
     </div>
 </div>
 
@@ -59,10 +59,10 @@
 <style>
     .table-container {
         display: flex;
-        width: auto;
+        width: 100%;
         margin-top: 20px;
-        align-items: center;
-        margin-left: 37%;
+        align-self: center;
+        justify-content: center;
     }
 
     table {
@@ -91,4 +91,9 @@
         opacity: 0.5;
         cursor: not-allowed;
     }
+
+    .h3 {
+        margin-top: 20px;
+    }
+
 </style>
