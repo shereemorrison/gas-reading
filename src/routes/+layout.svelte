@@ -20,25 +20,17 @@
 <slot />
 
 <style>
-
-.app-bar {
-	display: flex;
-	justify-content: center;  /* Center the logo horizontally */
-	align-items: center;      /* Center the logo vertically */
-	height: 50px;             /* Set the height of your app bar */
-  }
   
   .logo {
-	height: 50px; /* Adjust this size to match the height of your app bar */
+	height: 50px; 
   }
 	nav a {
-	margin-right: 20px;      /* Add spacing between the links */
-	font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; /* Change font */
-	text-decoration: none;   /* Remove underline */
-	color: inherit;          /* Inherit color from parent (adjust if needed) */
+	margin-right: 20px;    
+	font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
+	text-decoration: none;   
+	color: inherit;        
 }
 
-/* Remove margin from the last link */
 nav a:last-child {
 	margin-right: 0; }
 

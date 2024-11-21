@@ -16,7 +16,6 @@
         loadReadings(currentPage);
     }
 
-    // Load the first page initially
     loadReadings(currentPage);
 </script>
 
