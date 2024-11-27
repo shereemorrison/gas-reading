@@ -1,38 +1,27 @@
+<script>
+	import { onMount } from 'svelte';
+	import { goto } from '$app/navigation';
+	import { fetchAllCardNumbers, checkLoginStatus } from '$lib/login';
 
-<div class="container h-full mx-auto flex flex-col justify-center items-center">
-    <div class="space-y-5">
-        <h1 class="h1">Welcome</h1>
-        <h2>What would you like to see?</h2>
-    </div>
+	let isLoggedIn = false;
 
-    <div class="space-y-2">
-        <button type="button" class="btn btn-sm variant-filled">
-            <a href="/gas">Gas readings</a>
-        </button>
+	onMount(async () => {
+		const cardNumbers = await fetchAllCardNumbers();
 
-        <button type="button" class="btn btn-sm variant-filled">
-            <a href="/temperature">Temp readings</a>
-        </button>
-    </div>
-</div>
+		if (cardNumbers.length > 0) {
+			for (let cardNumber of cardNumbers) {
+				const status = await checkLoginStatus(cardNumber);
+				if (status) {
+					isLoggedIn = true;
+					break;
+				}
+			}
+		}
 
-<style>
-    h1 {
-        margin-top: 200px;
-        text-align: center;
-    }
-    h2 {
-        text-align: center;
-    }
+		if (isLoggedIn) {
+			goto('/readings');
+		}
+	});
+</script>
 
-    button {
-        margin: 5px;
-        margin-top: 20px;
-        align-items: center;
-    }
-
-    a {
-        text-decoration: none;
-        color: inherit;
-    }
-</style>
+<p>Scan your card to login</p>
