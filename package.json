@@ -25,6 +25,7 @@
   },
   "type": "module",
   "dependencies": {
-    "@supabase/supabase-js": "^2.46.1"
+    "@supabase/supabase-js": "^2.46.1",
+    "svelte-routing": "^2.13.0"
   }
 }
