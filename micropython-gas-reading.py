@@ -47,10 +47,10 @@ spi = SPI(1, baudrate=100000, polarity=0, phase=0, sck=sck, mosi=mosi, miso=miso
 sda = Pin(5, Pin.OUT)
 
 # Supabase REST API URL and headers for authentication
-SUPABASE_URL = "https://pywpljuuoecmoshimynl.supabase.co/rest/v1/Members"
+SUPABASE_URL = "yoururl"
 HEADERS = {
-    "apikey": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InB5d3BsanV1b2VjbW9zaGlteW5sIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MzE0NTI4NDAsImV4cCI6MjA0NzAyODg0MH0.kA_26qqxNGc4DUkeXALn2BnhCqcxbJbIyTAV_jvQzzU",  # Replace with your Supabase public key
-    "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InB5d3BsanV1b2VjbW9zaGlteW5sIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTczMTQ1Mjg0MCwiZXhwIjoyMDQ3MDI4ODQwfQ.at_ASBciIWnPeboysqrDRk3lw1zyILHX3rz8PsbrAew",  # Replace with your actual Supabase access token
+    "apikey": " ", # Replace with your Supabase public key
+    "Authorization": "Bearer ",  # Replace with your actual Supabase access token
 }
 
 try:
